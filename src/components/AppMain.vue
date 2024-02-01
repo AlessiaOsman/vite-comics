@@ -2,7 +2,7 @@
 
 export default {
     name: 'AppMain',
-    data: ()=>({
+    data: () => ({
         mainText: 'Content goes here'
     })
 }
@@ -11,9 +11,9 @@ export default {
 <template>
     <main>
         <div class="container">
-            <p>{{mainText}}</p>
+            <p>{{ mainText }}</p>
         </div>
-        
+
     </main>
 </template>
 
@@ -23,7 +23,7 @@ main {
     padding: 32px 0;
     color: #ffffff;
 
-    p{
+    p {
         font-size: 24px;
     }
 
