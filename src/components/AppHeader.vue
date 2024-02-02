@@ -1,10 +1,9 @@
 <script>
-import MainNav from './MainNav.vue'
 export default {
     name: 'AppHeader',
     // Aggiunto array di oggetti
     data: () => ({
-        
+
         logoImage: 'dc-logo.png'
     }),
 
@@ -16,7 +15,10 @@ export default {
 
         }
     },
-    components: {MainNav}
+    props: {
+        links: Array
+
+    }
 }
 </script>
 
@@ -25,18 +27,20 @@ export default {
         <div class="container">
 
             <img :src="createImagePath(logoImage)" alt="logo">
-            <MainNav/>
-            
+            <ul>
+                <li v-for="link in links"><a :href="link.url">{{ link.text }}</a></li>
+            </ul>
+
         </div>
 
     </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 header {
     background-color: #ffffff;
     padding: 24px 0;
-    
+
 
     ul {
         display: flex;
@@ -44,6 +48,10 @@ header {
         list-style-type: none;
         font-weight: bold;
         text-transform: uppercase;
+
+        a {
+            color: #000000;
+        }
     }
 }
 </style>
