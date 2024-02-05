@@ -2,14 +2,17 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
-import { menusLinks, products } from './assets/data/index';
+import { headerLinks, products, footerMenus, upperFooterLinks, iconLinks } from './assets/data/index';
 
 export default {
   name: 'Comics',
   components: { AppHeader, AppMain, AppFooter },
-  data: ()=>({
-    menusLinks,
-    products
+  data: () => ({
+    headerLinks,
+    products,
+    footerMenus,
+    upperFooterLinks,
+    iconLinks
   })
 
 
@@ -17,9 +20,9 @@ export default {
 </script>
 
 <template>
-  <AppHeader :links="menusLinks" />
-  <AppMain/>
-  <AppFooter/>
+  <AppHeader :links="headerLinks" />
+  <AppMain />
+  <AppFooter :menus="footerMenus" :upper-menus="upperFooterLinks" />
 </template>
 
 <style lang="scss">
