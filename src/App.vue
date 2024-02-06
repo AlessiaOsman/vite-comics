@@ -16,13 +16,13 @@ export default {
   })
 
 
-}
+} 
 </script>
 
 <template>
   <AppHeader :links="headerLinks" />
   <AppMain />
-  <AppFooter :menus="footerMenus" :upper-menus="upperFooterLinks" />
+  <AppFooter :menus="footerMenus" :upper-menus="upperFooterLinks"/>
 </template>
 
 <style lang="scss">

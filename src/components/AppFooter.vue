@@ -48,8 +48,11 @@ export default {
         </div>
 
 
-        <div class="bonus2">
-            <div class="container"></div>
+        <div class="bottom-footer">
+            <div class="container">
+                <button>SIGN UP NOW</button>
+                
+            </div>
         </div>
     </footer>
 </template>
@@ -64,20 +67,30 @@ footer {
 }
 
 .upper-footer {
-    background-color: blue;
+    background-color: #0282f9;
     min-height: 150px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    display: flex;
 
     ul{
         display: flex;
         list-style-type: none;
+        width: 100%;
 
         li{
             display: flex;
             align-items: center;
+            flex-basis: 25%;
+            justify-content: center;
+            gap: 8px;
+
+            img{
+                width:50px;
+                height: auto;
+            }
 
             a{
                 color: #ffffff;
@@ -86,8 +99,8 @@ footer {
     }
 }
 
-.bonus2 {
-    background-color: green;
+.bottom-footer {
+    background-color: #303030;
     min-height: 100px;
     position: absolute;
     bottom: 0;
